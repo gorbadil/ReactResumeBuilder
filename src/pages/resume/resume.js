@@ -16,7 +16,7 @@ function Resume() {
     setTimeout(() => {
       setUpdate(false);
     }, 1000);
-  }, [update, data]);
+  }, [update]);
   return (
     <div>
       <h1 className="resume-header">Resume</h1>
