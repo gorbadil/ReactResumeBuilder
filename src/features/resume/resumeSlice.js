@@ -83,7 +83,7 @@ export const resumeSlice = createSlice({
     updateEducation: (state, action) => {
       const { id, key, value } = action.payload;
       const education = state.educations.find(
-        (education) => education.id == id
+        (education) => education.id === parseInt(id)
       );
       education[key] = value;
     },
@@ -98,7 +98,7 @@ export const resumeSlice = createSlice({
     updateExperience: (state, action) => {
       const { id, key, value } = action.payload;
       const experience = state.experiences.find(
-        (experience) => experience.id == id
+        (experience) => experience.id === parseInt(id)
       );
       experience[key] = value;
     },
@@ -149,7 +149,7 @@ export const resumeSlice = createSlice({
     updateReference: (state, action) => {
       const { id, key, value } = action.payload;
       const reference = state.references.find(
-        (reference) => reference.id == id
+        (reference) => reference.id === parseInt(id)
       );
       reference[key] = value;
     },
