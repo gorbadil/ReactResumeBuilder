@@ -87,7 +87,7 @@ function ResumePDF(props) {
     },
     middleLine: {
       width: "2px",
-      height: "100%",
+      height: "200%",
       backgroundColor: "tomato",
     },
     seperatorLine: {
@@ -282,7 +282,7 @@ function ResumePDF(props) {
           <View style={styles.resumeLeft} wrap>
             <View style={styles.links}>
               {infoLinksArray.map((li, index) => (
-                <View style={styles.link} key={`links${index}`}>
+                <View break style={styles.link} key={`links${index}`}>
                   <Image src={icons[li.icon]} style={styles.icon} alt="" />
                   <Link style={styles.linkName} src={li.name}>
                     {li.name}
@@ -294,7 +294,7 @@ function ResumePDF(props) {
             <View style={styles.leftMain}>
               <Text style={styles.leftHead}>Education</Text>
               {data.educations.map((edu, index) => (
-                <View key={`edu${index}`} style={styles.educationView}>
+                <View break key={`edu${index}`} style={styles.educationView}>
                   <Text style={styles.eduSchool}>{edu.school}</Text>
                   <Text style={styles.eduField}>{edu.field}</Text>
                   <Text style={styles.eduDate}>
@@ -314,8 +314,8 @@ function ResumePDF(props) {
                 ))}
               </View>
             </View>
-            <View style={styles.seperatorLine}></View>
-            <View style={styles.leftMain}>
+            <View break style={styles.seperatorLine}></View>
+            <View break style={styles.leftMain}>
               <Text className="left-head">Languages</Text>
               <View style={styles.leftSkillsMain}>
                 {data.languages.map((lang, index) => (
