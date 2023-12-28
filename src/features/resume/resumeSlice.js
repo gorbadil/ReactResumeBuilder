@@ -19,7 +19,7 @@ export const resumeSlice = createSlice({
       ],
       about:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      photo: "https://via.placeholder.com/150",
+      photo: "https://picsum.photos/200",
     },
     educations: [
       {
@@ -82,8 +82,9 @@ export const resumeSlice = createSlice({
     },
     updateEducation: (state, action) => {
       const { id, key, value } = action.payload;
+      const parseId = parseInt(id);
       const education = state.educations.find(
-        (education) => education.id == id
+        (education) => education.id === parseId
       );
       education[key] = value;
     },
@@ -97,9 +98,11 @@ export const resumeSlice = createSlice({
     },
     updateExperience: (state, action) => {
       const { id, key, value } = action.payload;
+      const parseId = parseInt(id);
       const experience = state.experiences.find(
-        (experience) => experience.id == id
+        (experience) => experience.id === parseId
       );
+      console.log(parseId);
       experience[key] = value;
     },
     addSkill: (state, action) => {
@@ -122,7 +125,8 @@ export const resumeSlice = createSlice({
     },
     updateProject: (state, action) => {
       const { id, key, value } = action.payload;
-      const project = state.projects.find((project) => project.id == id);
+      const parseId = parseInt(id);
+      const project = state.projects.find((project) => project.id === parseId);
       project[key] = value;
     },
     addLanguage: (state, action) => {
@@ -148,8 +152,9 @@ export const resumeSlice = createSlice({
     },
     updateReference: (state, action) => {
       const { id, key, value } = action.payload;
+      const parseId = parseInt(id);
       const reference = state.references.find(
-        (reference) => reference.id == id
+        (reference) => reference.id === parseId
       );
       reference[key] = value;
     },

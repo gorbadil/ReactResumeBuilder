@@ -33,7 +33,7 @@ function Builder() {
     dispatch({
       type: "resume/addEducation",
       payload: {
-        id: Math.random(),
+        id: parseInt(Math.random() * 1000),
         school: "",
         degree: "",
         start: "",
@@ -54,7 +54,7 @@ function Builder() {
     dispatch({
       type: "resume/addExperience",
       payload: {
-        id: Math.random(),
+        id: parseInt(Math.random() * 1000),
         title: "",
         company: "",
         start: "",
@@ -84,7 +84,11 @@ function Builder() {
   const handleAddProject = () => {
     dispatch({
       type: "resume/addProject",
-      payload: { id: Math.random(), name: "", description: "" },
+      payload: {
+        id: parseInt(Math.random() * 1000),
+        name: "",
+        description: "",
+      },
     });
   };
   const handleDeleteProject = (id) => {
@@ -114,7 +118,7 @@ function Builder() {
     dispatch({
       type: "resume/addReference",
       payload: {
-        id: Math.random(),
+        id: parseInt(Math.random() * 1000),
         name: "",
         position: "",
         email: "",

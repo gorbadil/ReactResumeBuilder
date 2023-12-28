@@ -65,6 +65,7 @@ function ResumePDF(props) {
       width: 150,
       height: 150,
       borderRadius: 75,
+      // backgroundColor: "rgba(0,0,0,0.3)",
     },
     header: {
       width: "100%",
@@ -251,11 +252,17 @@ function ResumePDF(props) {
     },
   });
   const imageSrc = data.personalInfo.photo;
+  // console.log(imageSrc);
   return (
     <Document>
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header}>
           <Image style={styles.image} src={imageSrc} />
+          {/* <Image
+            style={styles.image}
+            src="https://picsum.photos/200"
+            alt="merhaba"
+          /> */}
           <View style={styles.headerName}>
             <Text style={styles.headerNameText}>{data.personalInfo.name}</Text>
             <Text style={styles.headerNameTitle}>

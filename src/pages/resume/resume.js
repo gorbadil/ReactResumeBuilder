@@ -9,10 +9,10 @@ function Resume() {
   const [sendData, setSendData] = useState(data);
   const [update, setUpdate] = useState(false);
   const handleUpdate = () => {
-    setUpdate(true);
+    setSendData(data);
   };
   useEffect(() => {
-    setSendData(data);
+    setUpdate(true);
     setTimeout(() => {
       setUpdate(false);
     }, 1000);
