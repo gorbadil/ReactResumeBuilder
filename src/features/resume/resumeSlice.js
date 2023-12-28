@@ -83,7 +83,7 @@ export const resumeSlice = createSlice({
     updateEducation: (state, action) => {
       const { id, key, value } = action.payload;
       const education = state.educations.find(
-        (education) => education.id === parseInt(id)
+        (education) => education.id == id
       );
       education[key] = value;
     },
@@ -98,7 +98,7 @@ export const resumeSlice = createSlice({
     updateExperience: (state, action) => {
       const { id, key, value } = action.payload;
       const experience = state.experiences.find(
-        (experience) => experience.id === parseInt(id)
+        (experience) => experience.id == id
       );
       experience[key] = value;
     },
@@ -122,9 +122,7 @@ export const resumeSlice = createSlice({
     },
     updateProject: (state, action) => {
       const { id, key, value } = action.payload;
-      const project = state.projects.find(
-        (project) => project.id === parseInt(id)
-      );
+      const project = state.projects.find((project) => project.id == id);
       project[key] = value;
     },
     addLanguage: (state, action) => {
@@ -151,7 +149,7 @@ export const resumeSlice = createSlice({
     updateReference: (state, action) => {
       const { id, key, value } = action.payload;
       const reference = state.references.find(
-        (reference) => reference.id === parseInt(id)
+        (reference) => reference.id == id
       );
       reference[key] = value;
     },
