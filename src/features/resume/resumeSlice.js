@@ -122,7 +122,9 @@ export const resumeSlice = createSlice({
     },
     updateProject: (state, action) => {
       const { id, key, value } = action.payload;
-      const project = state.projects.find((project) => project.id == id);
+      const project = state.projects.find(
+        (project) => project.id === parseInt(id)
+      );
       project[key] = value;
     },
     addLanguage: (state, action) => {
